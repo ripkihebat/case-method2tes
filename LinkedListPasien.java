@@ -23,13 +23,13 @@ public class LinkedListPasien {
         Pasien pasien = new Pasien(nama, nik, keluhan);
         NodePasien baru = new NodePasien(pasien);
         if (head == null) {
-            head = tail = baru;
+            tail = null;
         } else {
             tail.next = baru;
             tail = baru;
         }
         size++;
-        System.out.println(">> Pasien berhasil ditambahkan ke antrian.\n");
+        System.out.println(">> Pasien masuk ke dalam antrian.\n");
         sc.close();
     }
 
