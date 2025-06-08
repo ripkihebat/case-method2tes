@@ -48,5 +48,6 @@ public class Main {
                     
             }
         } while (pilihan != 6);
+    sc.close();
     }
 }

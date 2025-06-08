@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class TransaksiLayanan {
-    private Pasien pasien;
-    private Dokter dokter;
-    private int durasiLayanan;
-    private int biaya;
+    Pasien pasien;
+    Dokter dokter;
+    int durasiLayanan;
+    int biaya;
 
     public TransaksiLayanan(Pasien pasien, Dokter dokter, int durasiLayanan) {
         this.pasien = pasien;
@@ -18,20 +18,20 @@ public class TransaksiLayanan {
     }
 
     public String getRingkasanTransaksi() {
-        return pasien.getNama() + " dilayani oleh " + dokter.getNama() +
-               " (" + durasiLayanan + " jam): Rp " + biaya;
+    return pasien.nama + " dilayani oleh " + dokter.nama + " (" + durasiLayanan + " jam): Rp " + biaya;
+
     }
 
     public static TransaksiLayanan prosesTransaksi(Pasien pasien) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Pasien " + pasien.getNama() + " dipanggil");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Pasien " + pasien.nama + " dipanggil");
         System.out.print("Masukkan ID Dokter: ");
-        String id = input.nextLine();
+        String id = sc.nextLine();
         System.out.print("Masukkan Nama Dokter: ");
-        String nama = input.nextLine();
+        String nama = sc.nextLine();
         System.out.print("Masukkan Durasi Layanan (jam): ");
-        int durasi = input.nextInt();
-        input.nextLine(); // clear buffer
+        int durasi = sc.nextInt();
+        sc.nextLine(); 
 
         Dokter dokter = new Dokter(id, nama);
         TransaksiLayanan transaksi = new TransaksiLayanan(pasien, dokter, durasi);

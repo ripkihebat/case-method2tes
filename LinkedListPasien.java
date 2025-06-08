@@ -30,6 +30,7 @@ public class LinkedListPasien {
         }
         size++;
         System.out.println(">> Pasien berhasil ditambahkan ke antrian.\n");
+        sc.close();
     }
 
     public void tampilkanAntrian() {
