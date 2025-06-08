@@ -18,7 +18,7 @@ public class TransaksiLayanan {
     }
 
     public String getRingkasanTransaksi() {
-    return pasien.nama + " dilayani oleh " + dokter.nama + " (" + durasiLayanan + " jam): Rp " + biaya;
+    return pasien.nama + " (" + durasiLayanan + " jam): Rp " + biaya;
 
     }
 
@@ -37,5 +37,6 @@ public class TransaksiLayanan {
         TransaksiLayanan transaksi = new TransaksiLayanan(pasien, dokter, durasi);
         System.out.println(">> Pasien telah dilayani, transaksi berhasil dicatat.");
         return transaksi;
+
     }
 }

@@ -13,24 +13,24 @@ public class LinkedListPasien {
 
     public void tambahPasien() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Masukkan nama pasien: ");
+        System.out.print("Nama pasien: ");
         String nama = sc.nextLine();
-        System.out.print("Masukkan NIK pasien: ");
+        System.out.print("NIK: ");
         String nik = sc.nextLine();
-        System.out.print("Masukkan keluhan: ");
+        System.out.print("Keluhan: ");
         String keluhan = sc.nextLine();
 
         Pasien pasien = new Pasien(nama, nik, keluhan);
         NodePasien baru = new NodePasien(pasien);
         if (head == null) {
-            tail = null;
+            head = baru;
+            tail = baru;
         } else {
             tail.next = baru;
             tail = baru;
         }
         size++;
         System.out.println(">> Pasien masuk ke dalam antrian.\n");
-        sc.close();
     }
 
     public void tampilkanAntrian() {
@@ -40,6 +40,7 @@ public class LinkedListPasien {
         }
         NodePasien bantu = head;
         int no = 1;
+        System.out.println("-- Antrian Pasien --");
         while (bantu != null) {
             System.out.println("Antrian ke-" + no++);
             bantu.data.tampilkanInfo();

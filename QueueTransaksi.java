@@ -11,7 +11,8 @@ public class QueueTransaksi {
         if (transaksiList.isEmpty()) {
             System.out.println(">> Belum ada transaksi yang dicatat.");
         } else {
-            System.out.println("Daftar Transaksi:");
+            System.out.println("-- Riwayat Transaksi --");
+            System.out.println("Daftar Transaksi: ");
             for (TransaksiLayanan t : transaksiList) {
                 System.out.println(t.getRingkasanTransaksi());
             }

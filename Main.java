@@ -5,16 +5,16 @@ public class Main {
 
         int pilihan;
         java.util.Scanner sc = new java.util.Scanner(System.in);
-
+        System.out.println();
         do {
-            System.out.println("=== Menu Klinik ===");
-            System.out.println("1. Tambah Antrian Pasien");
-            System.out.println("2. Tampilkan Antrian Pasien");
+            System.out.println("=== SISTEM ANTRIAN KLINIK ===");
+            System.out.println("1. Tambah Pasien ke Antrian");
+            System.out.println("2. Lihat Antrian");
             System.out.println("3. Layani Pasien");
-            System.out.println("4. Tampilkan Sisa Antrian");
-            System.out.println("5. Tampilkan Transaksi Layanan");
-            System.out.println("6. Keluar");
-            System.out.print("Pilih menu: ");
+            System.out.println("4. Cek Sisa Antrian Pasien");
+            System.out.println("5. Lihat Riwayat Transaksi");
+            System.out.println("0. Keluar");
+            System.out.print("Pilih: ");
             pilihan = sc.nextInt();
             sc.nextLine();
 
@@ -35,19 +35,19 @@ public class Main {
                     }
                     break;
                 case 4:
-                    System.out.println(">> Sisa antrian: " + antrian.getSisaAntrian());
+                    System.out.println(">> Sisa pasien dalam antrian: " + antrian.getSisaAntrian());
                     break;
                 case 5:
                     transaksiQueue.tampilkanRiwayat();
                     break;
-                case 6:
+                case 0:
                     System.out.println(">> Terima kasih, program selesai. Semoga Pasien lekas sembuh!");
                     break;
                 default:
                     System.out.println(">> Pilihan tidak valid.");
                     
             }
-        } while (pilihan != 6);
+        } while (pilihan != 0);
     sc.close();
     }
 }
